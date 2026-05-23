@@ -1,16 +1,28 @@
 [project]
 name = "rag-demo"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
+description = "RAG demo with LangChain, Ollama, ChromaDB and Chainlit"
 requires-python = ">=3.12"
 dependencies = [
-    "chainlit>=2.11.1",
-    "chromadb>=1.5.9",
-    "langchain>=1.3.1",
-    "langchain-chroma>=1.1.0",
-    "langchain-community>=0.4.2",
-    "langchain-ollama>=1.1.0",
-    "pypdf>=6.12.1",
-    "python-dotenv>=1.2.2",
+    "langchain>=0.3.0",
+    "langchain-community>=0.3.0",
+    "langchain-ollama>=0.2.0",
+    "langchain-chroma>=0.1.0",
+    "chromadb>=0.5.0",
+    "chainlit>=1.3.0",
+    "pypdf>=4.0.0",
+    "python-dotenv>=1.0.0",
+    "pydantic-settings>=2.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rag_demo"]
+
+[tool.uv]
+dev-dependencies = [
+    "hatchling>=1.29.0",
 ]
