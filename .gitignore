@@ -216,3 +216,26 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Al final del archivo .gitignore, añadimos las siguientes líneas para ignorar archivos y directorios específicos de nuestro proyecto.
+cat >> .gitignore << 'EOF'
+
+# Entorno virtual
+.venv/
+
+# Variables de entorno reales (nunca subir)
+.env
+
+# ChromaDB (vectores generados localmente)
+chroma_db/
+
+# Archivos Python compilados
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Archivos del sistema
+.DS_Store
+EOF
