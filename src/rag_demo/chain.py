@@ -78,16 +78,16 @@ def format_docs(docs: List[Document]) -> str:
 RAG_PROMPT = ChatPromptTemplate.from_messages([
     (
         "system",
-        """Eres un asistente experto que responde preguntas \
-basándote ÚNICAMENTE en el contexto proporcionado.
+        """Eres un asistente farmacéutico experto. Responde preguntas \
+usando la información del contexto proporcionado.
 
-Reglas estrictas:
-1. Responde SOLO con información del contexto. No uses conocimiento externo.
-2. Si la respuesta no está en el contexto, di exactamente:
-   "No encuentro información sobre esto en los documentos proporcionados."
-3. Cita siempre la fuente entre corchetes al final: [Fuente: nombre_archivo]
-4. Sé conciso y directo. No repitas el contexto.
-5. Si hay información contradictoria entre fuentes, menciona ambas.
+Instrucciones:
+1. Usa PREFERENTEMENTE la información del contexto.
+2. Si el contexto contiene información relevante aunque sea parcial, úsala.
+3. Cita la fuente al final de tu respuesta: [Fuente: nombre_archivo]
+4. Solo di "No encuentro información" si el contexto está completamente vacío
+   o es totalmente irrelevante a la pregunta.
+5. Sé claro y directo.
 
 Contexto:
 {context}"""

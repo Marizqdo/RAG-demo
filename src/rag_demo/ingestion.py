@@ -17,7 +17,7 @@ import logging
 from pathlib import Path
 from typing import List
 
-from langchain_community.document_loaders import PyPDFLoader, TextLoader
+from langchain_community.document_loaders import PyMuPDFLoader, TextLoader
 from langchain_core.documents import Document
 from langchain_ollama import OllamaEmbeddings
 from langchain_chroma import Chroma
@@ -88,7 +88,7 @@ def load_documents(documents_path: Path) -> List[Document]:
                 # PyPDFLoader: extrae texto página por página
                 # Cada página se convierte en un Document separado
                 # con metadata: {"source": "ruta.pdf", "page": 0}
-                loader = PyPDFLoader(str(file_path))
+                loader = PyMuPDFLoader(str(file_path))
 
             elif file_path.suffix.lower() == ".txt":
                 # TextLoader: carga el archivo de texto completo
