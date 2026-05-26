@@ -360,6 +360,7 @@ Si quieres extender este proyecto:
 - [Ollama models](https://ollama.com/library)
 
 ---
+📄 [Descargar documento PDF](Arquitectura_RAG.pdf)
 
 ## Licencia
 
