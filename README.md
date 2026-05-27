@@ -100,7 +100,7 @@ RAG resuelve el problema más crítico de los LLMs en entornos empresariales:
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/TU_USUARIO/rag-demo.git
+[git clone https://github.com/Marizqdo/RAG-demo.git]
 cd rag-demo
 ```
 
@@ -258,11 +258,11 @@ TOP_K_RESULTS=4       # chunks a recuperar por consulta
 
 ### Guía de ajuste de parámetros
 
-| Parámetro | Valor bajo | Valor alto | Recomendación |
-|---|---|---|---|
-| `CHUNK_SIZE` | más precisión, menos contexto | menos precisión, más contexto | 256-512 para FAQs; 512-1024 para docs técnicos |
-| `CHUNK_OVERLAP` | riesgo de perder info en cortes | redundancia | 10-20% del chunk_size |
-| `TOP_K_RESULTS` | respuestas más focalizadas | más contexto, más coste | 3-5 es el rango óptimo |
+| Parámetro       | Valor bajo                      | Valor alto                          | Recomendación                                  |
+|-----------------|---------------------------------|-------------------------------------|------------------------------------------------|
+| `CHUNK_SIZE`    | más precisión, menos contexto   | menos precisión, más contexto       | 256-512 para FAQs; 512-1024 para docs técnicos |
+| `CHUNK_OVERLAP` | riesgo de perder info en cortes | redundancia                         | 10-20% del chunk_size                          |
+| `TOP_K_RESULTS` | respuestas más focalizadas      | más contexto, más coste             | 3-5 es el rango óptimo                         |
 
 ---
 
@@ -310,14 +310,14 @@ uv sync
 
 Si quieres entender qué hace cada parte del sistema:
 
-| Concepto | Descripción |
-|---|---|
-| **Embedding** | Representación numérica del significado de un texto. Textos similares tienen vectores cercanos. |
-| **Vector DB** | Base de datos optimizada para buscar vectores por similitud semántica, no por coincidencia exacta. |
-| **Chunking** | División de documentos en fragmentos manejables. El tamaño afecta directamente la calidad del retrieval. |
-| **Retriever** | Componente que, dada una pregunta, busca los fragmentos más relevantes en la Vector DB. |
-| **Prompt augmentation** | Técnica de añadir contexto recuperado al prompt antes de enviarlo al LLM. |
-| **RAG** | Arquitectura que combina retrieval (búsqueda) con generation (LLM) para respuestas fundamentadas. |
+| Concepto                | Descripción                                                                                              |
+|-------------------------|----------------------------------------------------------------------------------------------------------|
+| **Embedding**           | Representación numérica del significado de un texto. Textos similares tienen vectores cercanos.          |
+| **Vector DB**           | Base de datos optimizada para buscar vectores por similitud semántica, no por coincidencia exacta.       |
+| **Chunking**            | División de documentos en fragmentos manejables. El tamaño afecta directamente la calidad del retrieval. |
+| **Retriever**           | Componente que, dada una pregunta, busca los fragmentos más relevantes en la Vector DB.                  |
+| **Prompt augmentation** | Técnica de añadir contexto recuperado al prompt antes de enviarlo al LLM.                                |
+| **RAG**                 | Arquitectura que combina retrieval (búsqueda) con generation (LLM) para respuestas fundamentadas.        |
 
 ---
 
@@ -368,4 +368,4 @@ MIT — libre para usar, modificar y distribuir con atribución.
 
 ---
 
-*Desarrollado como recurso educativo para la charla RAG — 2025*
+*Desarrollado como recurso educativo para la presentación de la Arquitectura RAG — 2026*
